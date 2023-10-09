@@ -9,7 +9,7 @@ Update these links to point to your relevant project resources
 
 [Project Github](https://github.com)
 
-[Paper Repository (Google Drive)](https://drive.google.com/drive/) *Alternately, create reference_papers in bibliogrpahy*
+[Paper Repository (Google Drive)](https://drive.google.com/drive/) *Alternately, create reference_papers in bibliography*
 
 [Project Calendar](https://drive.google.com/drive/)
 
@@ -161,6 +161,18 @@ The [data](https://github.com/osullik/project_template/tree/main/data) directory
 ## Coding
 We'll work out how we want to manage our approach to coding later. I'm a big fan of TDD, but we can work out how we want to approach it. 
 
+As a rule of thumb, don't commit things direct to the master branch. Make your own branch locally using something like: 
+
+        git checkout -b branch_name
+
+Then synch it to the upstream: 
+
+        git --set-upstream origin kent
+
+so when you push things to gitm we can review and verify work doesn't break via a pull request. 
+
+
+
 ## Writing
 
 ### Reading Papers
@@ -193,7 +205,7 @@ We can use overleaf, or edit the sections offline. Either way, we'll back things
 3. Edit each section you have checked out. Use your editor of choice, but VScode has some nice LateX plugins
 4. Once you're happy it works, make sure it compiles with the makefile, command will be something like:
 
-        make project_template.pdf
+        make main.pdf
 
 5. Get rid of all the intermediary files: 
 
