@@ -167,7 +167,7 @@ As a rule of thumb, don't commit things direct to the master branch. Make your o
 
 Then synch it to the upstream: 
 
-        git --set-upstream origin kent
+        git --set-upstream origin branch_name
 
 so when you push things to gitm we can review and verify work doesn't break via a pull request. 
 
