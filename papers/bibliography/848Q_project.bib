@@ -1,0 +1,81 @@
+% Learning By Asking
+@inproceedings{Misra2018,
+  title={Learning by asking questions},
+  author={Misra, Ishan and Girshick, Ross and Fergus, Rob and Hebert, Martial and Gupta, Abhinav and Van Der Maaten, Laurens},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={11--20},
+  year={2018},
+  groups={learning_by_asking},
+  abstract={We introduce an interactive learning framework for the development and testing of intelligent visual systems, called learning-by-asking (LBA). We explore LBA in context of the Visual Question Answering (VQA) task. LBA differs from standard VQA training in that most questions are not observed during training time, and the learner must ask questions it wants answers to. Thus, LBA more closely mimics natural learning and has the potential to be more data-efficient than the traditional VQA setting. We present a model that performs LBA on the CLEVR dataset, and show that it automatically discovers an easy-to-hard curriculum when learning interactively from an oracle. Our LBA generated data consistently matches or outperforms the CLEVR train data and is more sample efficient. We also show that our model asks questions that generalize to state-of-the-art VQA models and to novel test time distributions.},
+  comment={}
+}
+
+@inproceedings{Yang2018,
+  title={Visual Curiosity: Learning to Ask Questions to Learn Visual Recognition},
+  author={Yang, Jianwei and Lu, Jiasen and Lee, Stefan and Batra, Dhruv and Parikh, Devi},
+  booktitle={Conference on Robot Learning},
+  pages={63--80},
+  year={2018},
+  organization={PMLR},
+  groups={learning_by_asking},
+  abstract={In an open-world setting, it is inevitable that an intelligent agent (e.g., a robot) will encounter visual objects, attributes or relationships it does not recognize. In this work, we develop an agent empowered with visual curiosity, i.e. the ability to ask questions to an Oracle (e.g., human) about the contents in images (e.g., What is the object on the left side of the red cube?) and build visual recognition model based on the answers received (e.g., Cylinder). In order to do this, the agent must (1) understand what it recognizes and what it does not, (2) formulate a valid, unambiguous and informative language query (a question) to ask the Oracle, (3) derive the parameters of visual classifiers from the Oracle response and (4) leverage the updated visual classifiers to ask more clarified questions. Specifically, we propose a novel framework and formulate the learning of visual curiosity as a reinforcement learning problem. In this framework, all components of our agent, visual recognition module (to see), question generation policy (to ask), answer digestion module (to understand) and graph memory module (to memorize), are learned entirely end-to-end to maximize the reward derived from the scene graph obtained by the agent as a consequence of the dialog with the Oracle. Importantly, the question generation policy is disentangled from the visual recognition system and specifics of the environment. Consequently, we demonstrate a sort of double generalization. Our question generation policy generalizes to new environments and a new pair of eyes, i.e., new visual system. Trained on a synthetic dataset, our results show that our agent learns new visual concepts significantly faster than several heuristic baselines, even when tested on synthetic environments with novel objects, as well as in a realistic environment.},
+  comment={}
+}
+
+%Embodied Question Answering
+@inproceedings{Das2018,
+  title={Embodied question answering},
+  author={Das, Abhishek and Datta, Samyak and Gkioxari, Georgia and Lee, Stefan and Parikh, Devi and Batra, Dhruv},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={1--10},
+  year={2018},
+  groups={embodied_question_answering},
+  abstract={We present a new AI task -- Embodied Question Answering (EmbodiedQA) -- where an agent is spawned at a random location in a 3D environment and asked a question ("What color is the car?"). In order to answer, the agent must first intelligently navigate to explore the environment, gather necessary visual information through first-person (egocentric) vision, and then answer the question ("orange"). EmbodiedQA requires a range of AI skills -- language understanding, visual recognition, active perception, goal-driven navigation, commonsense reasoning, long-term memory, and grounding language into actions. In this work, we develop a dataset of questions and answers in House3D environments, evaluation metrics, and a hierarchical model trained with imitation and reinforcement learning.},
+  comment={}
+}
+
+%Measuring AI 'intelligence'
+
+@article{King2023,
+    author = "Michael King",
+    title = "{Administration of the text-based portions of a general IQ test to five different large language models}",
+    year = "2023",
+    month = "4",
+    url = "https://www.techrxiv.org/articles/preprint/Administration_of_the_text-based_portions_of_a_general_IQ_test_to_five_different_large_language_models/22645561",
+    doi = "10.36227/techrxiv.22645561.v1",
+    groups={measuring_intelligence},
+    abstract={As additional large language model (LLM) AI chatbots become publicly available, there is growing interest in their capacity for general intelligence, and what differences in intelligence these various models might exhibit. One challenge in assessing general intelligence using a standard intelligence quotient (IQ) test is that a large fraction of the questions in such tests is visual, in particular the “spatial” portions that present patterns and sequences in drawn images, and numerical questions where the spatial arrangement of numbers is important. In this study, the author distilled down the text-based portions of two self-scoring IQ tests and administered these questions to five different publicly available large language models: ChatGPT (Default GPT-3.5 version), ChatGPT (Legacy GPT-3.5 version), ChatGPT (GPT-4 version), Microsoft Bing chatbot (also based on the GPT-4 LLM, however linked to live internet search), and Google Bard, which is based on the LaMBDA LLM. The test scores were converted into a range of approximate IQ values for each LLM with the following median values determined: 112, 111.5, 123, 121.5, and 101, respectively. Of particular interest is that all five LLMs performed exceptionally well in certain question types, and particularly poorly in other question types, suggesting that LLMs share common strengths and weaknesses in particular aspects of general intelligence. The highest performing LLM publicly available to date, the GPT-4 version of ChatGPT Plus, shows performance on the test-based portions of a general IQ test which approach the 99th percentile of human performance, within the range of MENSA level of general intelligence. These models are expected to continue to improve over time, based on the differences seen over versions released in the past year, and will soon be capable of taking intact IQ tests that rely on interpretation of graphical images.},
+    comment={}
+}
+
+@article{Wang2023,
+  title={Emotional intelligence of large language models},
+  author={Wang, Xuena and Li, Xueting and Yin, Zi and Wu, Yue and Jia, Liu},
+  journal={arXiv preprint arXiv:2307.09042},
+  year={2023},
+  groups={measuring_intelligence},
+  abstract={Large Language Models (LLMs) have demonstrated remarkable abilities across numerous disciplines, primarily assessed through tasks in language generation, knowledge utilization, and complex reasoning. However, their alignment with human emotions and values, which is critical for real-world applications, has not been systematically evaluated. Here, we assessed LLMs' Emotional Intelligence (EI), encompassing emotion recognition, interpretation, and understanding, which is necessary for effective communication and social interactions. Specifically, we first developed a novel psychometric assessment focusing on Emotion Understanding (EU), a core component of EI, suitable for both humans and LLMs. This test requires evaluating complex emotions (e.g., surprised, joyful, puzzled, proud) in realistic scenarios (e.g., despite feeling underperformed, John surprisingly achieved a top score). With a reference frame constructed from over 500 adults, we tested a variety of mainstream LLMs. Most achieved above-average EQ scores, with GPT-4 exceeding 89\% of human participants with an EQ of 117. Interestingly, a multivariate pattern analysis revealed that some LLMs apparently did not reply on the human-like mechanism to achieve human-level performance, as their representational patterns were qualitatively distinct from humans. In addition, we discussed the impact of factors such as model size, training method, and architecture on LLMs' EQ. In summary, our study presents one of the first psychometric evaluations of the human-like characteristics of LLMs, which may shed light on the future development of LLMs aiming for both high intellectual and emotional intelligence. Project website: this https URL},
+  comment={}
+}
+
+%Multi-Modal QA
+@article{Luo2023,
+  title={End-to-end Knowledge Retrieval with Multi-modal Queries},
+  author={Luo, Man and Fang, Zhiyuan and Gokhale, Tejas and Yang, Yezhou and Baral, Chitta},
+  journal={arXiv preprint arXiv:2306.00424},
+  year={2023},
+  groups={multi_modal_qa},
+  abstract={We investigate knowledge retrieval with multi-modal queries, i.e. queries containing information split across image and text inputs, a challenging task that differs from previous work on cross-modal retrieval. We curate a new dataset called ReMuQ for benchmarking progress on this task. ReMuQ requires a system to retrieve knowledge from a large corpus by integrating contents from both text and image queries. We introduce a retriever model ``ReViz'' that can directly process input text and images to retrieve relevant knowledge in an end-to-end fashion without being dependent on intermediate modules such as object detectors or caption generators. We introduce a new pretraining task that is effective for learning knowledge retrieval with multimodal queries and also improves performance on downstream tasks. We demonstrate superior performance in retrieval on two datasets (ReMuQ and OK-VQA) under zero-shot settings as well as further improvements when finetuned on these datasets.},
+  comment={}
+}
+
+%Scene Graphs
+@article{Ghosh2019,
+  title={Generating natural language explanations for visual question answering using scene graphs and visual attention},
+  author={Ghosh, Shalini and Burachas, Giedrius and Ray, Arijit and Ziskind, Avi},
+  journal={arXiv preprint arXiv:1902.05715},
+  year={2019},
+  groups={scene_graphs},
+  abstract={In this paper, we present a novel approach for the task of eXplainable Question Answering (XQA), i.e., generating natural language (NL) explanations for the Visual Question Answering (VQA) problem. We generate NL explanations comprising of the evidence to support the answer to a question asked to an image using two sources of information: (a) annotations of entities in an image (e.g., object labels, region descriptions, relation phrases) generated from the scene graph of the image, and (b) the attention map generated by a VQA model when answering the question. We show how combining the visual attention map with the NL representation of relevant scene graph entities, carefully selected using a language model, can give reasonable textual explanations without the need of any additional collected data (explanation captions, etc). We run our algorithms on the Visual Genome (VG) dataset and conduct internal user-studies to demonstrate the efficacy of our approach over a strong baseline. We have also released a live web demo showcasing our VQA and textual explanation generation using scene graphs and visual attention.},
+  comment={}
+}
