@@ -42,7 +42,7 @@
 \usepackage{graphicx}
 \usepackage{svg}
 
-\title{Measuring and Defining Knowledge in Visual and Textual Media through VQA Models}
+\title{The Title of the Paper goes Here}
 
 % Author information can be set in various styles:
 % For several authors from the same institution:
@@ -61,49 +61,31 @@
 %         Author 3 \\ Address line \\ ... \\ Address line}
 
 \author{
-  Hirad Yazdankhah \\
-  University of Maryland \\
-  College Park \\
-  Maryland, USA \\
-  \texttt{hyazdan@umd.edu} \\\And
-  Kent O'Sullivan \\
-  University of Maryland \\
-  College Park \\
-  Maryland, USA \\
-  \texttt{osullik@umd.edu} \\\And
-  Pavan Mantripragada \\
-  University of Maryland \\
-  College Park \\
-  Maryland, USA \\
-  \texttt{mppavan@umd.edu}\\
+  Auth 1 \\
+  Affiliation 1 \\
+  Suburb 1 \\
+  Sate, Country \\ \And
+  Auth 2 \\
+  Affiliation 2 \\
+  Suburb 2 \\
+  Sate, Country \\
+  \texttt{email@email.com} \\\And
+  Auth 3 \\
+  Affiliation 3 \\
+  Suburb 3 \\
+  Sate, Country \\
+  \texttt{email@email.com} \\
   }
 
 \begin{document}
 
-% % % % % % % % % % % % % % % % % % % %
-% User-defined packages, commands etc %
-% % % % % % % % % % % % % % % % % % % %
-
 \graphicspath{ {figures/}{auto_commit_fig/}{auto_fig/} }
 
-% Macro to include a latex file in the ./Sections/ directory
-\newcommand{\latexfile}[1]{\input{sections/#1}}
-
-% Comment Macros
-\newcommand{\pinaforecomment}[4]{\colorbox{#1}{\textcolor{#4}{\parbox{.8\linewidth}{#2: #3}}}}
-\newcommand{\osullikomment}[1]{\pinaforecomment{green}{Kent}{#1}{black}}
-\newcommand{\hycomment}[1]{\pinaforecomment{blue}{Hirad}{#1}{white}}
-\newcommand{\pmcomment}[1]{\pinaforecomment{red}{Pavan}{#1}{white}}
-
-\newcommand\blankpage{%
-    \null
-    \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
-    \newpage}
+%Load User-Defined Macros
+\input{macros/macros.tex}
 
 \maketitle
 \latexfile{00_abstract.tex}
-
 \latexfile{10_introduction.tex}
 \latexfile{20_baselines.tex}
 \latexfile{30_experiment_design.tex}
@@ -114,7 +96,7 @@
 
 \section*{Acknowledgements}
 
-% Entries for the entire Anthology, followed by custom entries
+% Print the bibliography entry
 \bibliography{bibliography/848Q_project.bib}
 
 \end{document}

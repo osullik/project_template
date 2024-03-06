@@ -1,0 +1,17 @@
+% % % % % % % % % % % % % % % % % % % %
+% User-defined packages, commands etc %
+% % % % % % % % % % % % % % % % % % % %
+
+% Macro to include a latex file in the ./Sections/ directory
+\newcommand{\latexfile}[1]{\input{sections/#1}}
+
+% Comment Macros
+\newcommand{\pinaforecomment}[4]{\colorbox{#1}{\textcolor{#4}{\parbox{.8\linewidth}{#2: #3}}}}
+\newcommand{\authComment}[1]{\pinaforecomment{green}{Author1}{#1}{black}} 
+%change a1Comment to be whatever invocation you want and the "Author1" to the name you want. You can modify the colours of the highlight (green here) and text (black here)
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}

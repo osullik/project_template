@@ -27,7 +27,7 @@ scripts/hunspell_dictionary.dic: scripts/dictionary.txt
 	sort $< | uniq >> $@
 
 %.spell: %.pdf scripts/hunspell_dictionary.dic
-	python3 Scripts/spell.py --files *.tex sections/*.tex
+	python3 scripts/spell.py --files *.tex sections/*.tex
 
 #ToDo: Add figure source 
 
@@ -37,10 +37,12 @@ scripts/hunspell_dictionary.dic: scripts/dictionary.txt
 #	out=$$(scripts/rscript_if_ne.sh .) && echo "$$out" > auto_fig/res.txt
 
 #%.pdf: %.tex auto_fig/res.txt $(TEX) $(BIB)
+
+# If fails to compile, try removing --shell-escape argument below. Is required on MacOS.
  %.pdf: %.tex $(TEX) $(BIB)
-	latexmk --shell-escape -pdf -pv $*				#If fails to compile, try removing --shell-escape argument. Is required on MacOS. 
+	latexmk --shell-escape -pdf -pv $*				 
 	cp $@ ~/public_html/temp || true
-	./scripts/style-check.rb *.tex Sections/*.tex
+	./scripts/style-check.rb *.tex sections/*.tex
 
 
 # These targets should remain in sync (e.g., if you fix one, do the same for the other).  Except for the .tgz target should have all the bib files but the arxiv target should have the bbl file ($<)
