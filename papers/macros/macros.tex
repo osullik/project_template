@@ -1,17 +1,46 @@
-% % % % % % % % % % % % % % % % % % % %
-% User-defined packages, commands etc %
-% % % % % % % % % % % % % % % % % % % %
+\renewcommand{\include}[1]{\input{Sections/#1}} %Tells the include command where to find the document sections.
 
-% Macro to include a latex file in the ./Sections/ directory
-\newcommand{\latexfile}[1]{\input{sections/#1}}
+%Comment Boxes
+    %Requires the etoolbox package
+    %Note: The following needs to be inserted after the begin docment: 
+        %\newbool{showcomments}
 
-% Comment Macros
-\newcommand{\pinaforecomment}[4]{\colorbox{#1}{\textcolor{#4}{\parbox{.8\linewidth}{#2: #3}}}}
-\newcommand{\authComment}[1]{\pinaforecomment{green}{Author1}{#1}{black}} 
-%change a1Comment to be whatever invocation you want and the "Author1" to the name you want. You can modify the colours of the highlight (green here) and text (black here)
+        % Show comments (Uncomment next line to show)
+        %\booltrue{showcomments}
 
-\newcommand\blankpage{%
-    \null
-    \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
-    \newpage}
+        % Hide comments (Uncomment next line to hide)
+        %\boolfalse{showcomments}
+
+
+\newcommand{\pinaforecomment}[4]{%
+    \ifbool{showcomments}{%
+        \colorbox{#1}{\textcolor{#4}{\parbox{.8\linewidth}{#2: #3}}}%
+    }{}%
+}
+
+\newcommand{\osullikomment}[1]{\pinaforecomment{green}{Kent}{#1}{black}}
+\newcommand{\billcomment}[1]{\pinaforecomment{Red}{Bill}{#1}{white}}
+\newcommand{\nrscomment}[1]{\pinaforecomment{violet}{Nicole}{#1}{white}}
+
+%Emphasis commands
+\newcommand{\gai}{{\small \fontfamily{phv}\selectfont GraphAI~}}
+
+
+%Definition Commands:
+\newcounter{definition} % Counter for definitions
+\renewcommand{\thedefinition}{\arabic{definition}} % Define the format of the counter
+
+\newcommand{\define}[2]{%
+    \par\vspace{\baselineskip}% Add some space before the definition
+    \noindent\textbf{Definition \thedefinition}\ [#1]:\quad #2% Print the definition
+    \stepcounter{definition}% Increment the counter
+}
+
+
+\newcounter{hypothesis} % Counter for hypotheses
+\renewcommand{\thehypothesis}{\arabic{hypothesis}} % Define the format of the counter
+
+\newcommand{\hyp}[1]{%
+    \noindent\textbf{H\thehypothesis}:\quad\parbox[t]{\dimexpr\linewidth-2em\relax}{#1\\}% Print the Hypothesis
+    \stepcounter{hypothesis}% Increment the counter
+}
