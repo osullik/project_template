@@ -1,5 +1,7 @@
 \renewcommand{\include}[1]{\input{Sections/#1}} %Tells the include command where to find the document sections.
 
+\newcommand{\latexfile}[1]{\input{sections/#1}}
+
 %Comment Boxes
     %Requires the etoolbox package
     %Note: The following needs to be inserted after the begin docment: 
@@ -11,15 +13,13 @@
         % Hide comments (Uncomment next line to hide)
         %\boolfalse{showcomments}
 
-\newcommand{\latexfile}[1]{\input{sections/#1}}
-
 \newcommand{\pinaforecomment}[4]{%
     \ifbool{showcomments}{%
         \colorbox{#1}{\textcolor{#4}{\parbox{.8\linewidth}{#2: #3}}}%
     }{}%
 }
 
-\newcommand{\authComment}[1]{\pinaforecomment{green}{Kent}{#1}{black}}
+\newcommand{\authComment}[1]{\pinaforecomment{green}{AuthorName}{#1}{black}}
 
 %Emphasis commands
 \newcommand{\gai}{{\small \fontfamily{phv}\selectfont GraphAI~}}
