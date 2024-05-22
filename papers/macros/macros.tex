@@ -11,6 +11,7 @@
         % Hide comments (Uncomment next line to hide)
         %\boolfalse{showcomments}
 
+\newcommand{\latexfile}[1]{\input{sections/#1}}
 
 \newcommand{\pinaforecomment}[4]{%
     \ifbool{showcomments}{%
@@ -18,9 +19,7 @@
     }{}%
 }
 
-\newcommand{\osullikomment}[1]{\pinaforecomment{green}{Kent}{#1}{black}}
-\newcommand{\billcomment}[1]{\pinaforecomment{Red}{Bill}{#1}{white}}
-\newcommand{\nrscomment}[1]{\pinaforecomment{violet}{Nicole}{#1}{white}}
+\newcommand{\authComment}[1]{\pinaforecomment{green}{Kent}{#1}{black}}
 
 %Emphasis commands
 \newcommand{\gai}{{\small \fontfamily{phv}\selectfont GraphAI~}}
